@@ -34,7 +34,7 @@ class OrderViewModel : ViewModel() {
     private val _uiState = MutableStateFlow(OrderUiState())
     val uiState: StateFlow<OrderUiState> = _uiState.asStateFlow()
 
-    fun updateEntree(entree: EntreeItem) {
+    fun updateEntree(entree: MenuItem) {
         val previousEntree = _uiState.value.entree
         updateItem(entree, previousEntree)
     }
